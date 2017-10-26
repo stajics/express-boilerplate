@@ -1,0 +1,37 @@
+{
+  "name": "express-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/stajics/express-boilerplate.git",
+  "author": "stajics <stajic.srdjan92@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "express-validation": "^1.0.2",
+    "express-winston-middleware": "^0.1.0",
+    "joi": "^13.0.1",
+    "jsonwebtoken": "^8.1.0",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.12.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "winston": "^2.4.0",
+    "winston-loggly-transport": "^1.0.3"
+  },
+  "scripts": {
+    "start": "yarn start:local",
+    "start:local": "NODE_ENV=local SSL=false nodemon index.js"
+  }
+}

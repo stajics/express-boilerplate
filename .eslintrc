@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "airbnb"
+  ],
+  "rules": {
+    "consistent-return": "off",
+    "no-shadow": "off",
+    "no-param-reassign": "off",
+    "no-console": "off",
+    "no-underscore-dangle": "off",
+    "no-new": "off",
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ]
+  },
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "globals": {
+    "test": "true",
+    "fail": "true",
+    "expect": "true",
+    "beforeAll": "true",
+    "beforeEach": "true",
+    "describe": "true",
+    "jest": "true",
+    "__dirname": "true",
+    "logger": "true"
+  }
+}
