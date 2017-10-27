@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const passport = require('passport');
 
 const { expressLogger } = require('./logger.config.js');
 const routes = require('../server/routes');
@@ -27,7 +28,7 @@ app.use(expressLogger);
 
 app.use(bodyParser.json({ limit: '25mb' }));
 app.use(bodyParser.urlencoded({ limit: '25mb', extended: true, parameterLimit: 50000 }));
-
+app.use(passport.initialize());
 // enable cors
 app.options('*', cors());
 app.use(cors());

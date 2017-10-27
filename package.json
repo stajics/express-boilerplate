@@ -11,7 +11,9 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
-    "nodemon": "^1.12.1"
+    "jest": "^21.2.1",
+    "nodemon": "^1.12.1",
+    "supertest": "^3.0.0"
   },
   "dependencies": {
     "bcrypt": "^1.0.3",
@@ -30,8 +32,20 @@
     "winston": "^2.4.0",
     "winston-loggly-transport": "^1.0.3"
   },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "config/passport/*.js",
+      "server/controllers/*.js",
+      "server/middlewares/*.js",
+      "server/validators/*.js",
+      "server/routes/*.js",
+      "server/models/*.js"
+    ]
+  },
   "scripts": {
     "start": "yarn start:local",
-    "start:local": "NODE_ENV=local SSL=false nodemon index.js"
+    "start:local": "NODE_ENV=local SSL=false nodemon index.js",
+    "test": "NODE_ENV=test jest --coverage --verbose --bail --forceExit"
   }
 }

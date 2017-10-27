@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`:login Should fail login (bad email) 1`] = `
+Object {
+  "error": Object {
+    "code": 1,
+    "message": "Bad credentials",
+  },
+}
+`;
+
+exports[`:login Should fail login (bad password) 1`] = `
+Object {
+  "error": Object {
+    "code": 1,
+    "message": "Bad credentials",
+  },
+}
+`;
+
+exports[`:login Should fail login (no email) 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "field": Array [
+        "email",
+      ],
+      "location": "body",
+      "messages": Array [
+        "\\"email\\" is required",
+      ],
+      "types": Array [
+        "any.required",
+      ],
+    },
+  ],
+  "status": 400,
+  "statusText": "Payload Validation Error",
+}
+`;
+
+exports[`:login Should login 1`] = `
+Object {
+  "data": Object {
+    "__v": 0,
+    "_id": "189b5b4aa79dff2f7fe6659d",
+    "email": "user1@test.com",
+    "firstName": "user1_name",
+    "lastName": "user1_lastname",
+  },
+}
+`;
+
+exports[`:signup Should fail signup (no password) 1`] = `
+Object {
+  "errors": Array [
+    Object {
+      "field": Array [
+        "password",
+      ],
+      "location": "body",
+      "messages": Array [
+        "\\"password\\" is required",
+      ],
+      "types": Array [
+        "any.required",
+      ],
+    },
+  ],
+  "status": 400,
+  "statusText": "Payload Validation Error",
+}
+`;
+
+exports[`:signup Should signup 1`] = `
+Object {
+  "data": Object {
+    "__v": 0,
+    "email": "test1@test.com",
+    "firstName": "name",
+    "lastName": "name",
+  },
+}
+`;

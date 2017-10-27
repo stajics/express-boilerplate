@@ -30,6 +30,9 @@
     "describe": "true",
     "jest": "true",
     "__dirname": "true",
-    "logger": "true"
+    "logger": "true",
+    "fixtures": "true",
+    "client": "true",
+    "jestTest": "true",
   }
 }
