@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`:login Should fail login (bad email) 1`] = `
+exports[`:login [POST /auth/login] Should fail login (bad email) 1`] = `
 Object {
   "error": Object {
     "code": 1,
@@ -9,7 +9,7 @@ Object {
 }
 `;
 
-exports[`:login Should fail login (bad password) 1`] = `
+exports[`:login [POST /auth/login] Should fail login (bad password) 1`] = `
 Object {
   "error": Object {
     "code": 1,
@@ -18,7 +18,7 @@ Object {
 }
 `;
 
-exports[`:login Should fail login (no email) 1`] = `
+exports[`:login [POST /auth/login] Should fail login (no email) 1`] = `
 Object {
   "errors": Array [
     Object {
@@ -39,7 +39,7 @@ Object {
 }
 `;
 
-exports[`:login Should login 1`] = `
+exports[`:login [POST /auth/login] Should login 1`] = `
 Object {
   "data": Object {
     "__v": 0,
@@ -51,7 +51,7 @@ Object {
 }
 `;
 
-exports[`:signup Should fail signup (no password) 1`] = `
+exports[`:signup [POST /auth/signup] Should fail signup (no password) 1`] = `
 Object {
   "errors": Array [
     Object {
@@ -72,7 +72,7 @@ Object {
 }
 `;
 
-exports[`:signup Should signup 1`] = `
+exports[`:signup [POST /auth/signup] Should signup 1`] = `
 Object {
   "data": Object {
     "__v": 0,

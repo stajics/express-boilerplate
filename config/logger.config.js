@@ -5,7 +5,7 @@ const appConfig = require('./');
 
 // const LogglyTransport = require('winston-loggly-transport');
 
-module.exports.logger = new Logger({
+const logger = new Logger({
   level: appConfig.LOG_LEVEL || 'silly',
   transports: [
     new (transports.Console)({
@@ -22,6 +22,9 @@ module.exports.logger = new Logger({
     // new (transports.File)({ filename: 'somefile.log' }),
   ],
 });
+
+if (process.env.SILENCE_ERRORS === 'true') logger.error = () => {};
+module.exports.logger = logger;
 
 module.exports.expressLogger = new WinMid.request({ // eslint-disable-line
   transports: [
