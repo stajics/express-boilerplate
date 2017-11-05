@@ -10,26 +10,27 @@ module.exports = () => {
 
   router.get('/', (req, res) => res.send('Server running!'));
 
-  router.use((err, req, res, next) => {
-    logger.error(JSON.stringify(err, Object.getOwnPropertyNames(err)));
+  router.use((req, res, next) => {
+    const err = new Error('Not Found');
+    err.status = 404;
     next(err);
   });
 
-  router.use((err, req, res, next) => { // eslint-disable-line
+  // eslint-disable-next-line
+  router.use((err, req, res, next) => {
     if (err instanceof ev.ValidationError) {
-      err.statusText = 'Payload Validation Error';
-      return res.status(err.status).json(err);
+      err.statusText = 'Payload Validation Error'; // eslint-disable-line
     }
-
-    if (err.statusCode) {
-      return res.status(err.statusCode).json({
-        error: err.message,
-      });
+    switch (err.status) {
+      case 404:
+        return res.notFound(err);
+      case null:
+      case undefined:
+      case 500:
+        return res.serverError(err);
+      default:
+        return res.badRequest(err);
     }
-
-    return res.status(500).json({
-      error: err.message,
-    });
   });
 
   return router;
