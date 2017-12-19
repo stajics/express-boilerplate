@@ -46,6 +46,7 @@
   "scripts": {
     "start": "yarn start:local",
     "start:local": "NODE_ENV=local SSL=false nodemon index.js",
-    "test": "NODE_ENV=test jest --coverage --verbose --bail --runInBand --forceExit"
+    "test": "LOG_LEVEL=error SILENCE_ERRORS=true NODE_ENV=test jest --coverage --verbose --bail --runInBand --forceExit",
+    "test:dev": "NODE_ENV=test jest --coverage --verbose --bail --runInBand --forceExit"
   }
 }

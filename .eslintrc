@@ -22,6 +22,7 @@
     "mocha": true
   },
   "globals": {
+    "jasmine": "true",
     "test": "true",
     "fail": "true",
     "expect": "true",

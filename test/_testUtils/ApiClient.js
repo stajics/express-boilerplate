@@ -18,7 +18,7 @@ class ApiClient {
   async get(path, qs) {
     const result = await supertest(expressApp)
       .get(path)
-      .set('authorization', `$Bearer ${this.token || ''}`)
+      .set('authorization', `Bearer ${this.token || ''}`)
       .query(qs);
 
     if (result.error) {
@@ -34,7 +34,7 @@ class ApiClient {
   async post(path, body) {
     const result = await supertest(expressApp)
       .post(path)
-      .set('authorization', `$Bearer ${this.token || ''}`)
+      .set('authorization', `Bearer ${this.token || ''}`)
       .send(body);
 
     if (result.error) {
@@ -50,7 +50,7 @@ class ApiClient {
   async put(path, body) {
     const result = await supertest(expressApp)
       .put(path)
-      .set('authorization', `$Bearer ${this.token || ''}`)
+      .set('authorization', `Bearer ${this.token || ''}`)
       .send(body);
 
     if (result.error) {
@@ -66,7 +66,7 @@ class ApiClient {
   async delete(path, body = {}) {
     const result = await supertest(expressApp)
       .delete(path)
-      .set('authorization', `$Bearer ${this.token || ''}`)
+      .set('authorization', `Bearer ${this.token || ''}`)
       .send(body);
 
     if (result.error) {
@@ -83,7 +83,7 @@ class ApiClient {
     form.file = this.toBase64(nodePath.join(__dirname, filePath));
     const result = await supertest(expressApp)
       .post(path)
-      .set('authorization', `$Bearer ${this.token || ''}`)
+      .set('authorization', `Bearer ${this.token || ''}`)
       .send(form);
 
     if (result.error) {

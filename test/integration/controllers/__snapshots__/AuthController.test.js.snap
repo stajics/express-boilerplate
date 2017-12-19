@@ -20,22 +20,24 @@ Object {
 
 exports[`:login [POST /auth/login] Should fail login (no email) 1`] = `
 Object {
-  "errors": Array [
-    Object {
-      "field": Array [
-        "email",
-      ],
-      "location": "body",
-      "messages": Array [
-        "\\"email\\" is required",
-      ],
-      "types": Array [
-        "any.required",
-      ],
-    },
-  ],
-  "status": 400,
-  "statusText": "Payload Validation Error",
+  "error": Object {
+    "errors": Array [
+      Object {
+        "field": Array [
+          "email",
+        ],
+        "location": "body",
+        "messages": Array [
+          "\\"email\\" is required",
+        ],
+        "types": Array [
+          "any.required",
+        ],
+      },
+    ],
+    "status": 400,
+    "statusText": "Payload Validation Error",
+  },
 }
 `;
 
@@ -53,22 +55,24 @@ Object {
 
 exports[`:signup [POST /auth/signup] Should fail signup (no password) 1`] = `
 Object {
-  "errors": Array [
-    Object {
-      "field": Array [
-        "password",
-      ],
-      "location": "body",
-      "messages": Array [
-        "\\"password\\" is required",
-      ],
-      "types": Array [
-        "any.required",
-      ],
-    },
-  ],
-  "status": 400,
-  "statusText": "Payload Validation Error",
+  "error": Object {
+    "errors": Array [
+      Object {
+        "field": Array [
+          "password",
+        ],
+        "location": "body",
+        "messages": Array [
+          "\\"password\\" is required",
+        ],
+        "types": Array [
+          "any.required",
+        ],
+      },
+    ],
+    "status": 400,
+    "statusText": "Payload Validation Error",
+  },
 }
 `;
 
