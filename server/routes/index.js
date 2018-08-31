@@ -21,6 +21,7 @@ module.exports = () => {
     if (err instanceof ev.ValidationError) {
       err.statusText = 'Payload Validation Error'; // eslint-disable-line
     }
+    logger.error(err.stack);
     switch (err.status) {
       case 404:
         return res.notFound(err);

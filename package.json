@@ -22,7 +22,6 @@
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "express-validation": "^1.0.2",
-    "express-winston-middleware": "^0.1.0",
     "joi": "^13.0.1",
     "jsonwebtoken": "^8.1.0",
     "lodash": "^4.17.4",

@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const passport = require('passport');
 
-const { expressLogger } = require('./logger.config.js');
 const routes = require('../server/routes');
 const responses = require('../server/responses');
 
@@ -24,7 +23,6 @@ const allowCrossDomain = (req, res, next) => {
 
 // middleware
 app.use(responses);
-app.use(expressLogger);
 
 app.use(bodyParser.json({ limit: '25mb' }));
 app.use(bodyParser.urlencoded({ limit: '25mb', extended: true, parameterLimit: 50000 }));

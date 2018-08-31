@@ -43,13 +43,11 @@ Object {
 
 exports[`:login [POST /auth/login] Should login 1`] = `
 Object {
-  "data": Object {
-    "__v": 0,
-    "_id": "189b5b4aa79dff2f7fe6659d",
-    "email": "user1@test.com",
-    "firstName": "user1_name",
-    "lastName": "user1_lastname",
-  },
+  "__v": 0,
+  "_id": "189b5b4aa79dff2f7fe6659d",
+  "email": "user1@test.com",
+  "firstName": "user1_name",
+  "lastName": "user1_lastname",
 }
 `;
 
@@ -78,11 +76,9 @@ Object {
 
 exports[`:signup [POST /auth/signup] Should signup 1`] = `
 Object {
-  "data": Object {
-    "__v": 0,
-    "email": "test1@test.com",
-    "firstName": "name",
-    "lastName": "name",
-  },
+  "__v": 0,
+  "email": "test1@test.com",
+  "firstName": "name",
+  "lastName": "name",
 }
 `;

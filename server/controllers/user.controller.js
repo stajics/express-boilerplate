@@ -17,9 +17,7 @@ const createUser = async (req, res, next) => {
     const data = newUser.toResponse();
     data.token = token;
 
-    res.json({
-      data,
-    });
+    res.ok(data);
   } catch (err) {
     next(err);
   }

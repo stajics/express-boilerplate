@@ -1,6 +1,5 @@
 const util = require('util');
 const { Logger, transports, config } = require('winston');
-const WinMid = require('express-winston-middleware');
 const appConfig = require('./');
 
 // const LogglyTransport = require('winston-loggly-transport');
@@ -25,12 +24,3 @@ const logger = new Logger({
 
 if (process.env.SILENCE_ERRORS === 'true') logger.error = () => {};
 module.exports.logger = logger;
-
-module.exports.expressLogger = new WinMid.request({ // eslint-disable-line
-  transports: [
-    new (transports.Console)({
-      level: 'error',
-      colorize: true,
-    }),
-  ],
-});

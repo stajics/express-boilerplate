@@ -7,9 +7,7 @@ const login = (req, res) => {
     const data = user.toResponse();
     data.token = token;
 
-    res.json({
-      data,
-    });
+    res.ok(data);
   })(req, res);
 };
 

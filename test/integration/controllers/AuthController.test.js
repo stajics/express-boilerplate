@@ -9,8 +9,8 @@ describe(':signup', () => {
       firstName: 'name',
       lastName: 'name',
     });
-    delete res.body.data.token; // remove changing attribute
-    delete res.body.data._id; // remove changing attribute
+    delete res.body.token; // remove changing attribute
+    delete res.body._id; // remove changing attribute
     // expect({ expected: 'expected' }).toMatchSnapshot(); run this first for ttd
     expect(res.body).toMatchSnapshot();
     done();
@@ -33,7 +33,7 @@ describe(':login', () => {
       email: fixtures.users[0].email,
       password: fixtures.users[0].password,
     });
-    delete res.body.data.token;
+    delete res.body.token;
     expect(res.body).toMatchSnapshot();
     done();
   });
