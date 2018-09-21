@@ -19,4 +19,12 @@ module.exports = {
     error.message = 'Invalid token';
     return error;
   },
+
+  unauthorized: () => {
+    const error = new Error();
+    error.code = 4;
+    error.message = 'Unauthorized.';
+    error.status = 401;
+    return error;
+  },
 };

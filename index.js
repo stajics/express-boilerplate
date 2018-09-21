@@ -1,10 +1,15 @@
 const config = require('./config');
-require('./config/connection.config');
-require('./server/models');
-require('./config/passport');
+const {
+  firebaseAdmin, firebaseAuth, firebaseDb, googleStorage,
+} = require('./config/firebase.config');
 const { logger } = require('./config/logger.config');
 
 global.logger = logger;
+
+global.firebaseAdmin = firebaseAdmin;
+global.firebaseAuth = firebaseAuth;
+global.firebaseDb = firebaseDb;
+global.googleStorage = googleStorage;
 
 const app = require('./config/express.config');
 

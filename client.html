@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample FirebaseUI App</title>
+    <!-- *******************************************************************************************
+       * TODO(DEVELOPER): Paste the initialization snippet from:
+       * Firebase Console > Overview > Add Firebase to your web app. *
+       ***************************************************************************************** -->
+       <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+   <script>
+     // Initialize Firebase
+     // TODO: Replace with your project's customized code snippet
+     var config = {
+       apiKey: "AIzaSyC0rEH8_k4Wv9zaRWuPgW0xlUSKtapxLVk",
+       authDomain: "express-boilerplate-a57c9.firebaseapp.com",
+       databaseURL: "https://express-boilerplate-a57c9.firebaseio.com",
+       projectId: "express-boilerplate-a57c9",
+     };
+     firebase.initializeApp(config);
+   </script>
+  </head>
+  <body>
+    <!-- The surrounding HTML is left untouched by FirebaseUI.
+         Your app may use that space for branding, controls and other customizations.-->
+    <h1>Welcome to My Awesome App</h1>
+    <div id="firebaseui-auth-container"></div>
+  </body>
+</html>

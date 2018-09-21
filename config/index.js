@@ -17,11 +17,10 @@ module.exports.LOGGLY_TOKEN = process.env.LOGGLY_TOKEN;
 module.exports.LOGGLY_SUBDOMAIN = process.env.LOGGLY_SUBDOMAIN;
 
 module.exports.APP_NAME = process.env.APP_NAME;
-module.exports.MONGODB_URI = process.env.DB_MONGODB_URI;
 
-module.exports.JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
-module.exports.JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN;
-module.exports.JWT_PASSWORD_RESET_SECRET_KEY = process.env.JWT_PASSWORD_RESET_SECRET_KEY;
+module.exports.FIREBASE_PROJECT_ID = process.env.FIREBASE_PROJECT_ID;
+module.exports.FIREBASE_SERVICE_ACCOUNT_FILENAME = process.env.FIREBASE_SERVICE_ACCOUNT_FILENAME;
+module.exports.DB_FIREBASE_URI = process.env.DB_FIREBASE_URI;
 
 module.exports.VALID_ATTACHMENT_MODELS = ['Comment', 'Discussion', 'File', 'Document', 'Message', 'SubTask', 'Task', 'Milestone', 'Share'];
 module.exports.VALID_FILE_ASSOCIATION_MODELS = ['User', 'Project', 'Comment', 'Discussion', 'File', 'Document', 'Message', 'SubTask', 'Task', 'Milestone', 'Share'];

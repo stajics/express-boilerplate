@@ -9,10 +9,4 @@ module.exports = {
       password: Joi.string().required(),
     },
   },
-  login: {
-    body: {
-      email: Joi.string().email().required(),
-      password: Joi.string().required(),
-    },
-  },
 };

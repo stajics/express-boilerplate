@@ -1,19 +1,20 @@
-const jwt = require('jsonwebtoken');
-const User = require('mongoose').model('User');
 const errors = require('../../config/constants/errors.constant');
-const config = require('../../config');
 
 module.exports = async (req, res, next) => {
   try {
     const token = req.headers.authorization.split(' ')[1];
-    const decoded = jwt.verify(token, config.JWT_SECRET_KEY);
+    const decodedToken = await firebaseAuth.verifyIdToken(token);
 
-    const userId = decoded.sub;
-    const user = await User.findById(userId);
+    const { uid } = decodedToken;
+    const userSnap = await firebaseDb.ref(`users/${uid}`).once('value');
+    const user = userSnap.val();
     if (!user) return res.unauthorized(errors.invalidToken());
 
-    req.user = user;
+    const firebaseUser = await firebaseAuth.getUser(uid);
 
+    req.user = user;
+    req.user.uid = uid;
+    req.user.firebaseUser = firebaseUser;
     return next();
   } catch (err) {
     return res.unauthorized(errors.invalidToken());

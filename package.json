@@ -16,30 +16,26 @@
     "supertest": "^3.0.0"
   },
   "dependencies": {
+    "@google-cloud/storage": "^2.0.3",
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "express-validation": "^1.0.2",
+    "firebase-admin": "^6.0.0",
     "joi": "^13.0.1",
-    "jsonwebtoken": "^8.1.0",
     "lodash": "^4.17.4",
-    "mongoose": "^4.12.4",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
     "winston": "^2.4.0",
     "winston-loggly-transport": "^1.0.3"
   },
   "jest": {
     "testEnvironment": "node",
     "collectCoverageFrom": [
-      "config/passport/*.js",
       "server/controllers/*.js",
       "server/middlewares/*.js",
       "server/validators/*.js",
-      "server/routes/*.js",
-      "server/models/*.js"
+      "server/routes/*.js"
     ]
   },
   "scripts": {

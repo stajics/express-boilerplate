@@ -35,5 +35,9 @@
     "fixtures": "true",
     "client": "true",
     "jestTest": "true",
+    "firebaseAdmin": "true",
+    "firebaseAuth": "true",
+    "firebaseDb": "true",
+    "googleStorage": "true"
   }
 }

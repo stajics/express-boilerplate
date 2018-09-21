@@ -1,23 +1,54 @@
-const User = require('mongoose').model('User');
-const jwt = require('jsonwebtoken');
-
-const config = require('../../config');
+const errors = require('../../config/constants/errors.constant');
+const { pickBy, identity } = require('lodash');
 
 const createUser = async (req, res, next) => {
+  let user = null;
   try {
-    let newUser = new User(req.body);
-    newUser = await newUser.save();
+    const {
+      firstName, lastName, email, password,
+    } = req.body;
 
-    const payload = {
-      sub: newUser._id,
-      timestamp: new Date().getTime(),
+    user = await firebaseAuth.createUser({
+      email,
+      password,
+    });
+
+    const newUserObject = {
+      email,
+      password,
+      firstName,
+      lastName,
     };
-    const token = jwt.sign(payload, config.JWT_SECRET_KEY, { expiresIn: config.JWT_EXPIRES_IN });
+    firebaseDb.ref(`users/${user.uid}`).set(newUserObject);
 
-    const data = newUser.toResponse();
-    data.token = token;
+    newUserObject.uid = user.uid;
 
-    res.ok(data);
+    res.ok(newUserObject);
+  } catch (err) {
+    if (user) await firebaseAuth.deleteUser(user.uid);
+    next(err);
+  }
+};
+
+const editUser = async (req, res, next) => {
+  try {
+    const {
+      firstName, lastName,
+    } = req.body;
+    const { uid } = req.params;
+
+    if (uid !== req.user.uid) {
+      throw errors.unauthorized();
+    }
+
+    await firebaseDb.ref(`users/${uid}`).update(pickBy({
+      firstName,
+      lastName,
+    }, identity));
+
+    res.ok({
+      text: 'Edited user.',
+    });
   } catch (err) {
     next(err);
   }
@@ -25,4 +56,5 @@ const createUser = async (req, res, next) => {
 
 module.exports = {
   createUser,
+  editUser,
 };
