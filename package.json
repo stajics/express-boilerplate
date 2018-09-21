@@ -36,7 +36,18 @@
       "server/middlewares/*.js",
       "server/validators/*.js",
       "server/routes/*.js"
-    ]
+    ],
+    "coveragePathIgnorePatterns": [
+      "isAuthenticated.midleware.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+          "branches": 80,
+          "functions": 90,
+          "lines": 90,
+          "statements": 90
+      }
+    }
   },
   "scripts": {
     "start": "yarn start:local",

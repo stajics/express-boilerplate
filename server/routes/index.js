@@ -10,7 +10,7 @@ module.exports = () => {
   router.use('/auth', authRoute);
   router.use('/users', usersRoute);
 
-  router.get('/', (req, res) => res.send('Server running!'));
+  // router.get('/', (req, res) => res.send('Server running!'));
 
   router.use((req, res, next) => {
     const err = new Error('Not Found');

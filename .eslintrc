@@ -38,6 +38,7 @@
     "firebaseAdmin": "true",
     "firebaseAuth": "true",
     "firebaseDb": "true",
-    "googleStorage": "true"
+    "googleStorage": "true",
+    "removeAtt": "true",
   }
 }

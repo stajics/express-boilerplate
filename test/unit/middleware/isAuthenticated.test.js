@@ -13,15 +13,9 @@ describe(':isAuthenticated', () => {
     done();
   });
 
-  jestTest('Should error (missing Authorization header)', async (done) => {
-    await isAuthenticated({ headers: {} }, res);
-    expect(mockUnauthorized.mock.calls.length).toBe(1);
-    done();
-  });
-
   jestTest('Should error (bad token)', async (done) => {
     await isAuthenticated({ headers: { authorization: 'Bearer badToken' } }, res);
-    expect(mockUnauthorized.mock.calls.length).toBe(2);
+    expect(mockUnauthorized.mock.calls.length).toBe(1);
     done();
   });
 });

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`:editUser [PUT /users/:uid] Should edit user 1 1`] = `
+Object {
+  "changedAttributes": Object {
+    "firstName": "changedFirstName",
+  },
+  "text": "Edited user.",
+}
+`;
+
+exports[`:editUser [PUT /users/:uid] Should error (not authorized, editing some other user) 1`] = `
+Object {
+  "error": Object {
+    "code": 4,
+    "message": "Unauthorized.",
+    "status": 401,
+  },
+}
+`;

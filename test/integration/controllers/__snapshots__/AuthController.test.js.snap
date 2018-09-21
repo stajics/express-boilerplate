@@ -1,53 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`:login [POST /auth/login] Should fail login (bad email) 1`] = `
+exports[`:signup [POST /auth/signup] Should fail signup (email exists) 1`] = `
 Object {
   "error": Object {
-    "code": 1,
-    "message": "Bad credentials",
+    "code": "auth/email-already-exists",
+    "message": "The email address is already in use by another account.",
   },
-}
-`;
-
-exports[`:login [POST /auth/login] Should fail login (bad password) 1`] = `
-Object {
-  "error": Object {
-    "code": 1,
-    "message": "Bad credentials",
-  },
-}
-`;
-
-exports[`:login [POST /auth/login] Should fail login (no email) 1`] = `
-Object {
-  "error": Object {
-    "errors": Array [
-      Object {
-        "field": Array [
-          "email",
-        ],
-        "location": "body",
-        "messages": Array [
-          "\\"email\\" is required",
-        ],
-        "types": Array [
-          "any.required",
-        ],
-      },
-    ],
-    "status": 400,
-    "statusText": "Payload Validation Error",
-  },
-}
-`;
-
-exports[`:login [POST /auth/login] Should login 1`] = `
-Object {
-  "__v": 0,
-  "_id": "189b5b4aa79dff2f7fe6659d",
-  "email": "user1@test.com",
-  "firstName": "user1_name",
-  "lastName": "user1_lastname",
 }
 `;
 
@@ -76,9 +34,9 @@ Object {
 
 exports[`:signup [POST /auth/signup] Should signup 1`] = `
 Object {
-  "__v": 0,
   "email": "test1@test.com",
   "firstName": "name",
   "lastName": "name",
+  "password": "password",
 }
 `;

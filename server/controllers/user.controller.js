@@ -41,13 +41,16 @@ const editUser = async (req, res, next) => {
       throw errors.unauthorized();
     }
 
-    await firebaseDb.ref(`users/${uid}`).update(pickBy({
+    const attributesToUpdate = pickBy({
       firstName,
       lastName,
-    }, identity));
+    }, identity);
+
+    await firebaseDb.ref(`users/${uid}`).update(attributesToUpdate);
 
     res.ok({
       text: 'Edited user.',
+      changedAttributes: attributesToUpdate,
     });
   } catch (err) {
     next(err);
