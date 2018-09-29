@@ -48,7 +48,7 @@ const init = async () => {
 };
 
 const clear = async () => {
-  await firebaseDb.ref('users').set({});
+  await firebaseDb.ref('users').remove();
 
   const usersList = await firebaseAuth.listUsers();
   if (!isEmpty(usersList.users)) {
