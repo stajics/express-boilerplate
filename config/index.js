@@ -22,5 +22,7 @@ module.exports.FIREBASE_PROJECT_ID = process.env.FIREBASE_PROJECT_ID;
 module.exports.FIREBASE_SERVICE_ACCOUNT_FILENAME = process.env.FIREBASE_SERVICE_ACCOUNT_FILENAME;
 module.exports.DB_FIREBASE_URI = process.env.DB_FIREBASE_URI;
 
+module.exports.GOOGLE_STORAGE_DEFAULT_BUCKET = process.env.GOOGLE_STORAGE_DEFAULT_BUCKET;
+
 module.exports.VALID_ATTACHMENT_MODELS = ['Comment', 'Discussion', 'File', 'Document', 'Message', 'SubTask', 'Task', 'Milestone', 'Share'];
 module.exports.VALID_FILE_ASSOCIATION_MODELS = ['User', 'Project', 'Comment', 'Discussion', 'File', 'Document', 'Message', 'SubTask', 'Task', 'Milestone', 'Share'];
