@@ -1216,12 +1216,6 @@ express-validation@^1.0.2:
   dependencies:
     lodash "^4.9.0"
 
-express-winston-middleware@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/express-winston-middleware/-/express-winston-middleware-0.1.0.tgz#52516ede58c63d6e0ffed779e2ecfbc038ea4988"
-  dependencies:
-    lodash "2.4.0"
-
 express@^4.16.2:
   version "4.16.2"
   resolved "https://registry.yarnpkg.com/express/-/express-4.16.2.tgz#e35c6dfe2d64b7dca0a5cd4f21781be3299e076c"
@@ -2594,13 +2588,9 @@ lodash.restparam@^3.0.0:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
 
-lodash@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-2.4.0.tgz#55074982883381b6b7134b742a5900bbbdab6b09"
-
-lodash@^4.14.0, lodash@^4.17.4, lodash@^4.3.0, lodash@^4.9.0:
-  version "4.17.4"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+lodash@^4.14.0, lodash@^4.17.19, lodash@^4.17.4, lodash@^4.3.0, lodash@^4.9.0:
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
 
 loggly@^1.1.0:
   version "1.1.1"
