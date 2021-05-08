@@ -508,8 +508,8 @@ bser@^2.0.0:
     node-int64 "^0.4.0"
 
 bson@~1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/bson/-/bson-1.0.4.tgz#93c10d39eaa5b58415cbc4052f3e53e562b0b72c"
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/bson/-/bson-1.0.9.tgz#12319f8323b1254739b7c6bef8d3e89ae05a2f57"
 
 buffer-equal-constant-time@1.0.1:
   version "1.0.1"
@@ -1215,12 +1215,6 @@ express-validation@^1.0.2:
   resolved "https://registry.yarnpkg.com/express-validation/-/express-validation-1.0.2.tgz#7d589dd3b257c55b3e004665b6c69cb12cc2b142"
   dependencies:
     lodash "^4.9.0"
-
-express-winston-middleware@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/express-winston-middleware/-/express-winston-middleware-0.1.0.tgz#52516ede58c63d6e0ffed779e2ecfbc038ea4988"
-  dependencies:
-    lodash "2.4.0"
 
 express@^4.16.2:
   version "4.16.2"
@@ -2593,10 +2587,6 @@ lodash.once@^4.0.0:
 lodash.restparam@^3.0.0:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
-
-lodash@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-2.4.0.tgz#55074982883381b6b7134b742a5900bbbdab6b09"
 
 lodash@^4.14.0, lodash@^4.17.4, lodash@^4.3.0, lodash@^4.9.0:
   version "4.17.4"
